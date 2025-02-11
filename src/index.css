@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --background:#373758;
+    --textcolor: rgb(255 255 255 );
+    --maincolor:rgb(86,217,94)
+  
+}
+
+.light{
+
+  --background: rgb(255 255 255 ) !important;
+  --textcolor: #373758 !important;
+  --maincolor:rgb(86,217,94)
+}
+html{
+    background: linear-gradient(to bottom, #373758, rgb(15, 18, 35));
+    color: var(--textcolor) !important;
+}
+.container {
+    width: 85%;
+    overflow: hidden;
+    margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+    overflow: hidden;
+    margin: auto;
+}
+}
+.hero {
+    min-height: 85vh;
+    background-image: url('../public/assets/lines.58bef457.svg');
+ 
+   
+
+}
+.overlay{
+    background-image: url('../public/assets/banner_img11.png');
+    min-height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% right !important;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .overlay {
+        background: linear-gradient(#1d232ab3, #1d232aa1), url(https://www.arhamtechpro.com/projects_assets/gym_fitness/images/banner_img.jpg) !important;
+        background-position: center right !important;
+    }
+}
+
+/* navbar*/
+.navbar{
+    background-color: rgb(0 0 0 /0.4);
+    border-color: rgb(255 255 255 / 0.15);
+    border-radius: 15px;
+    margin-top: 10px;
+
+    z-index: 1000;
+}
+.navbar a {
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all .3s ease-in;
+}
+.navbar a:hover{
+  color: var(--maincolor);
+}
+/* card styles*/
+.card-overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%; /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 65px;
+    text-align: center;
+    right: 100%;
+    gap: 30px;
+    transition: all .2s ease-in;
+}
+.card:hover .card-overlay{
+    right: 0 ;
+    cursor: pointer;
+}
+
+/* trainers styles*/
+
+.trainers{
+  background-image: url('../public/assets/circles.f1da0d80.svg');
+  background-position: center center;
+  background-size: contain;
+}
+
+
+
+/* pricing styles*/
+.box {
+    position: relative;
+    border-radius: 15px;
+    min-height: 700px;
+    transition: background-color  .3s ease-out  ;
+  }
+  .box:hover {
+   
+
+    cursor: pointer;
+    background-color: var(--maincolor);
+  }
+  .box:hover .package-title ,.box:hover .package-desc  ,.box:hover .badge-icon {
+    color: white;
+  }
+  .ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+  }
+  .ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+  }
+  .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #79A70A;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+  }
+  .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #79A70A;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+  }
+  
+
+  /* Custom styles for Swiper buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: var(--maincolor); 
+  color: white;                        
+  border-radius: 50%;                 
+  width: 50px !important;                         
+  height: 50px !important;                        
+  display: flex;                        
+  align-items: center !important;               
+  justify-content: center !important;             
+  font-size: 19px !important;                      
+  transition: background-color 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 19px !important; 
+  color: white;   
+  font-weight: bold;
+}
+
+.swiper-button-next {
+  top: 80% !important;
+  right: 90px !important;  
+}
+
+.swiper-button-prev {
+  top: 80% !important;
+  right: 200px !important;
+  left: unset !important;
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .swiper-button-next {
+    top: 90% !important;
+  }
+  
+  .swiper-button-prev {
+    top: 90% !important;
+ 
+  }
+}
+
+  .join-hero{
+    background-image: url('../public/assets/MembershipSection.jpg');
+    min-height: 430px;
+    background-size: cover;
+    background-position: center right;
+  }
+
+
+
